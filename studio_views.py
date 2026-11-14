@@ -12,11 +12,21 @@ def md(x):
     return re.sub(r'\*\*(.+?)\*\*',r'<b>\1</b>',s).replace('\n','<br>')
 def html(s): st.markdown(s,unsafe_allow_html=True)
 
-def hero(file=None, mode='Rule-based mode, Gemini off'):
-    html(f'''<div class="reference-hero"><h1>Airbnb Concierge Adviser, Bordeaux</h1>
-    <p>Five specialised agents turn a property description into a market-backed price, a target and a ready-to-review listing, under your control.</p>
-    <div class="hero-pills"><span>{esc(mode)}</span><span>Inside Airbnb data, Bordeaux, September 2026</span></div></div>''')
-
+def hero(file=None, mode="Rule-based mode, Gemini off"):
+    html(f"""
+    <div class="reference-hero">
+        <h1>Airbnb Concierge Adviser, Bordeaux</h1>
+        <p>
+            Five specialised agents turn a property description into
+            a market-backed price, a target and a ready-to-review
+            listing, under your control.
+        </p>
+        <div class="hero-pills">
+            <span>{esc(mode)}</span>
+            <span>Inside Airbnb data, Bordeaux, September 2026</span>
+        </div>
+    </div>
+    """)
 def agents_html(rt):
     labels={'waiting':'Waiting','running':'Working','done':'Done','approval':'Your turn','review':'To review','error':'Error'}
     out=['<div class="agents">']
