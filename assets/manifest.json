@@ -1,0 +1,122 @@
+{
+  "parts": [
+    "runtime.000",
+    "runtime.001"
+  ],
+  "sha256": "3e10ea45b224ac1fb9451eb7db13174bd8c5288e0326f34f31534fd22111d369",
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0",
+    "shap": "0.54.1"
+  },
+  "python": "3.12.14",
+  "nlp_method": "NLP models",
+  "nlp_metadata": {
+    "schema": "airbnb_review_nlp_v2",
+    "embedding_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "sentiment_model": "cardiffnlp/twitter-xlm-roberta-base-sentiment",
+    "aspects": {
+      "calm_noise": [
+        "The apartment is quiet at night.",
+        "Le logement est calme et tranquille.",
+        "We heard street noise all night.",
+        "Il y avait beaucoup de bruit la nuit.",
+        "It was not quiet at all.",
+        "Ce logement n'est pas calme du tout."
+      ],
+      "cleanliness": [
+        "The apartment was perfectly clean.",
+        "Le logement \u00e9tait tr\u00e8s propre.",
+        "The flat was dirty.",
+        "Le logement n'\u00e9tait pas propre."
+      ],
+      "location": [
+        "Close to the centre, shops and tram.",
+        "Bien situ\u00e9 pr\u00e8s des commerces.",
+        "The location is far from everything.",
+        "C'est loin du centre."
+      ],
+      "parking": [
+        "It was easy to park nearby.",
+        "Facile de se garer.",
+        "Parking was very difficult.",
+        "Difficile de trouver une place."
+      ],
+      "family": [
+        "A stay with our family and children.",
+        "Un s\u00e9jour en famille avec des enfants."
+      ],
+      "work": [
+        "A stay for remote work or a business trip.",
+        "Un s\u00e9jour pour le travail ou le t\u00e9l\u00e9travail."
+      ]
+    },
+    "rules": {
+      "quiet": [
+        "calm_noise",
+        "positive"
+      ],
+      "noise": [
+        "calm_noise",
+        "negative"
+      ],
+      "cleanliness": [
+        "cleanliness",
+        "positive"
+      ],
+      "location": [
+        "location",
+        "positive"
+      ],
+      "parking": [
+        "parking",
+        null
+      ],
+      "family": [
+        "family",
+        null
+      ],
+      "work": [
+        "work",
+        null
+      ]
+    },
+    "threshold": 0.45,
+    "sample_digest": "9f36e6a5601406be9539c04795b81f3d146b5b4e6e582d5c82cdf9f47e2bad28",
+    "parser": "punctuation_split_12_to_400_characters_v1",
+    "tokenizer": "sentencepiece_slow",
+    "aspect_assignment": "nearest_example_top_aspect_v1",
+    "signature": "3406bee7dee6cedc85ac63f6e8a649664cefd3939a45072e51dc6e380614752f",
+    "status": "completed",
+    "method": "NLP models",
+    "sample_reviews": 17865,
+    "analysed_sentences": 54895,
+    "sentiment_sentences": 28734,
+    "flags_digest": "7a64b4c46f3e3e64d553c1f11043a80225b8316ed0d76030fc97897a542c94be",
+    "seconds": 1555.93,
+    "device": "cpu",
+    "versions": {
+      "torch": "2.15.0+cpu",
+      "transformers": "4.57.6",
+      "sentence-transformers": "3.4.1",
+      "sentencepiece": "0.2.3"
+    },
+    "embedding_revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "sentiment_revision": "f2f1202b1bdeb07342385c3f807f9c07cd8f5cf8",
+    "limitation": "One dominant aspect and sentence-level sentiment. Mixed-aspect sentences and domain shift can cause errors. The threshold is uncalibrated. Nearby reviews do not prove this property has the same qualities.",
+    "cache_sha256": "4cbb81d0d7eb7d2d766c91679823b230f1b3fd0234d52c8b54413b69e4454c8c",
+    "sample_origin": "exact_review_sample_retained_in_previous_export",
+    "max_reviews_per_listing": 3,
+    "reviews_with_analysed_sentences": 17300,
+    "reviews_with_matched_aspect": 14837,
+    "runtime_python": "3.12.14",
+    "source_export_sha256": "e00981f72c8a1063b06bd77c3a2674c4acb65b8ff5bf1169f2bd7dd41b1f3c80",
+    "verified_at_utc": "2026-11-17T13:49:16.980001+00:00",
+    "sample_file_sha256": "ee06693ef1153def052f6d4cc4027c829dcc0c36c6d9fb561bd5f95d6320483e"
+  },
+  "previous_export_sha256": "e00981f72c8a1063b06bd77c3a2674c4acb65b8ff5bf1169f2bd7dd41b1f3c80",
+  "source_python": "3.14.7"
+}
