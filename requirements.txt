@@ -1,0 +1,10 @@
+# Replaced by export_streamlit.py with the exact scientific-library versions.
+streamlit>=1.40,<2
+plotly>=5.24,<7
+google-genai>=1,<3
+numpy
+pandas
+scipy
+scikit-learn
+joblib
+shap
