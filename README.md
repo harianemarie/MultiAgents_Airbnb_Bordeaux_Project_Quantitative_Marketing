@@ -40,8 +40,7 @@ It uses the models exported from the notebook. If the app is asleep, click the b
 ### Step 1: Get the project
 
 ```
-git clone https://github.com/kouazmydia-web/Quantitative_Marketing.git
-cd Quantitative_Marketing
+git clone https://github.com/harianemarie/MultiAgents_Airbnb_Bordeaux_Project_Quantitative_Marketing
 ```
 
 Or, on GitHub: green **Code** button → **Download ZIP**, then unzip the file.
