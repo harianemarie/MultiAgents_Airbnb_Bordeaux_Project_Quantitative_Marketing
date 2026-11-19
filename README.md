@@ -23,7 +23,7 @@ The whole project is in **one notebook**: `Airbnb_MultiAgent_Project.ipynb` (90 
 **Online application (Streamlit):** https://4yoabnnmh3uujp3nzmxnjn.streamlit.app
 It uses the models exported from the notebook. If the app is asleep, click the button to wake it up and wait about one minute.
 
-**Presentation:** `Presentation_finale.pptx`
+**Presentation:** `Airbnb_MultiAgent_Project.pptx`
 
 ---
 
